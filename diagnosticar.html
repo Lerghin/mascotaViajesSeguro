@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="icon" href="logotipo.png">
+   <link rel="stylesheet" href="diagnosticar.css">
+   <meta charset="UTF-8">
+   <title>Diagnosticar</title>
+</head>
+
+<form action="diagnostico.php" method="post">
+<label for="nombre">Nombre de la mascota:</label>
+<input type="text" id="nombre" name="nombre"><br><br>
+<label for="edad">Edad de la mascota:</label>
+<input type="number" id="edad" name="edad"><br><br>
+<label for="raza">Raza de la mascota:</label>
+<input type="text" id="raza" name="raza"><br><br>
+<label for="raza">Sexo de la mascota:</label>
+<select id="sexo" name="sexo">
+  <option value="S">Sexo de la mascota</option>
+  <option value="H">Hembra</option>
+  <option value="H">Macho</option>
+</select><br><br>
+<label for="sintomas">Sintomas:</label>
+<textarea id="sintomas" name="sintomas"></textarea><br><br>
+<center><input type="submit" value="DIAGNOSTICAR"></center>
+
+<div class="flechas">
+    <a href="index.html">Volver al inicio</a>
+</div>
+
+</form>
+</html>

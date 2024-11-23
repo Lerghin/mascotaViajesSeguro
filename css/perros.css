@@ -1,0 +1,8 @@
+*{
+    color: black;
+}
+
+body{
+    background-image: url(imagenes/tool1.png);
+    background-repeat: no-repeat;
+    background-size:cover;

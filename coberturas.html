@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro para Mascotas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: yellow; /\* Color de fondo \*/
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #FF69B4; /\* Color del texto del título \*/
+        }
+        .coverage {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .cotizar {
+            background-color: #FF69B4; /\* Color del botón \*/
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .cotizar:hover {
+            background-color: #ff1493; /\* Color del botón al pasar el ratón \*/
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="title">Pet Travel<br>Básico</div>
+        <div class="coverage">Cobertura<br>500 USD</div>
+        <p>Incluye coberturas elementales y básicas para el bienestar de tu mascota.</p>
+        <button class="cotizar">Cotizar 173 USD</button>
+    </div>
+
+    <div class="card">
+        <div class="title">Amigo Fiel<br>Medio</div>
+        <div class="coverage">Cobertura<br>1000 USD</div>
+        <p>Incluye coberturas con mejores características para prevenir accidentes en tu mascota.</p>
+        <button class="cotizar">Cotizar 285 USD</button>
+    </div>
+
+    <div class="card">
+        <div class="title">Amigo Fiel<br>Estándar</div>
+        <div class="coverage">Cobertura<br>2000 USD</div>
+        <p>Incluye coberturas más especializadas con las que tu mascota puede contar en caso de hacer travesuras.</p>
+        <button class="cotizar">Cotizar 378 USD</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* styles.css */
+
+body{
+    font-family: Arial, sans-serif; 
+    background-color: #f0f0f0;
+}
+
+h1 {
+   color: #00698f;
+}
+
+form {
+   margin: 20px;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+   display: block;
+   margin-bottom: 11px;
+}
+
+input[type="text"], input[type="email"], textarea[id="mensaje"] {
+   width: 50%;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+   background-color: #00698f;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+button[type="submit"]: hover {
+   background-color: #004d7a;
+}
+
+
+

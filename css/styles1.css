@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro para Mascotas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: yellow; /\* Color de fondo \*/
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #FF69B4; /\* Color del texto del título \*/
+        }
+        .coverage {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .cotizar {
+            background-color: #FF69B4; /\* Color del botón \*/
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .cotizar:hover {
+            background-color: #ff1493; /\* Color del botón al pasar el ratón \*/
+        }
+    </style>
+</head>
+<body>
