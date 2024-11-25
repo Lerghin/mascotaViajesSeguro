@@ -118,8 +118,7 @@
                     <option value="">Seleccione la especie</option>
                     <option value="Perro">Perro</option>
                     <option value="Gato">Gato</option>
-                    <option value="Ave">Ave</option>
-                    <option value="Otro">Otro</option>
+              
                 </select>
             </div>
 

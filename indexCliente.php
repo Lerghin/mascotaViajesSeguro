@@ -185,7 +185,7 @@ if (isset($_GET['id_mascota'])) {
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html"> Cerrar sesion </a>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Cerrar Sesión</a></li>
                 </li>
    
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -209,7 +209,11 @@ if (isset($_GET['id_mascota'])) {
 
         <div class="section details">
             <h2>Datos del Dueño</h2>
-            <p><strong>Nombre:</strong> <?php echo $dueno['nombre'] . ' ' . $dueno['apellido']; ?></p>
+            <p><strong>Nombre:</strong>
+            <a href="dashboardCliente.php?id_dueno=<?php echo $dueno['id_dueno']; ?>">
+                 <?php echo $dueno['nombre'] . ' ' . $dueno['apellido']; ?>
+             </a>
+          </p>
             <p><strong>Teléfono:</strong> <?php echo $dueno['telefono']; ?></p>
             <p><strong>Email:</strong> <?php echo $dueno['email']; ?></p>
         </div>

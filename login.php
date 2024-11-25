@@ -1,27 +1,68 @@
 <?php
+require 'conection.php';
+session_start();
 
-$conexion= new mysqli("localhost", "root", "","swguro_mascotas");
-
-if ($conexion connect_error) {
-   die("Conexion fallida: " . $conexion connect_error);
+if (!$conn) {
+    die("Error de conexi√≥n: " . $conn->connect_error);
 }
 
-$username = $_POST[¥username¥];
-$password = $_POST[¥password¥];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $cedula = $_POST['cedula'];
+    $contrasena = $_POST['contrasena'];
 
-$sql = "SELECT * FROM usuarios WHERE username = ¥$username¥ AND ¥$pasword¥";
+    // Validar que los campos no est√©n vac√≠os
+    if (empty($cedula) || empty($contrasena)) {
+        echo "<script>
+            alert('Por favor, complete todos los campos.');
+            window.history.back();
+        </script>";
+        exit;
+    }
 
-$resultado = $conexion query($sql);
+    // Preparar la consulta para buscar al usuario por c√©dula
+    $stmt = $conn->prepare("SELECT id_dueno, nombre, contrasena FROM due√±os WHERE cedula = ?");
+    if ($stmt === false) {
+        die("Ocurri√≥ un error inesperado. Por favor, int√©ntelo m√°s tarde.");
+    }
 
-if ($resultado num_rows > 0) {
-   session_star();
-   $_SESSION[¥username¥] = $username;
-   header("Location: dashboard.php");
-   exit;
-} esle{
-   ecgo "Credenciales incorrectas";
+    // Vincular el par√°metro
+    $stmt->bind_param("s", $cedula);
+
+    // Ejecutar la consulta
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    // Verificar si el usuario existe
+    if ($resultado->num_rows === 1) {
+        $usuario = $resultado->fetch_assoc();
+
+        // Verificar la contrase√±a
+        if (password_verify($contrasena, $usuario['contrasena'])) {
+            // Guardar datos en la sesi√≥n
+            $_SESSION['usuario_id'] = $usuario['id_dueno'];
+            $_SESSION['nombre'] = $usuario['nombre'];
+
+            echo "<script>
+                alert('Inicio de sesi√≥n exitoso.');
+                window.location.href = 'dashboardCliente.php';
+            </script>";
+        } else {
+            echo "<script>
+                alert('Contrase√±a incorrecta.');
+                window.history.back();
+            </script>";
+        }
+    } else {
+        echo "<script>
+            alert('La c√©dula no est√° registrada.');
+            window.history.back();
+        </script>";
+    }
+
+    // Cerrar la declaraci√≥n
+    $stmt->close();
 }
-$conexion close();
+
+// Cerrar la conexi√≥n
+$conn->close();
 ?>
-
-
