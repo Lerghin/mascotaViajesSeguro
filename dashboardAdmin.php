@@ -11,6 +11,9 @@ if (!isset($_SESSION['admin_id'])) {
     </script>";
     exit();
 }
+// Consultar todos los registros de dueños
+$queryDueno = "SELECT * FROM dueños";
+$resultDueno = $conn->query($queryDueno);
 
 // Obtener los datos del administrador
 $id_admin = $_SESSION['admin_id'];
@@ -155,6 +158,38 @@ $conn->close();
         </nav>
       </div>
     </header>
+    <div class="section">
+    <h2>Dueños</h2>
+    <a href="formDueño.php" class="btn btn-add">Agregar Dueño</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($dueno = $resultDueno->fetch_assoc()): ?>
+                <tr>
+                    <td><?php echo $dueno['id_dueno']; ?></td>
+                    <td><?php echo $dueno['nombre']; ?></td>
+                    <td><?php echo $dueno['apellido']; ?></td>
+                    <td><?php echo $dueno['telefono']; ?></td>
+                    <td><?php echo $dueno['email']; ?></td>
+                    <td>
+                        <a href="editarDueno.php?id_dueno=<?php echo $dueno['id_dueno']; ?>" class="btn btn-edit">Editar</a>
+                        <a href="eliminarDueno.php?id_dueno=<?php echo $dueno['id_dueno']; ?>" class="btn btn-delete">Eliminar</a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
+</div>
+
 
     <!-- Sección de Mascotas -->
     <div class="section">
@@ -213,7 +248,8 @@ $conn->close();
                         <td><?php echo $seguro['fecha_inicio']; ?></td>
                         <td><?php echo $seguro['fecha_fin']; ?></td>
                         <td>
-                            <a href="editarSeguro.php?id_seguro=<?php echo $seguro['id_seguro']; ?>" class="btn btn-edit">Editar</a>
+                        <a href="formEditarSeguro.php?id_seguro=<?php echo $seguro['id_seguro']; ?>" class="btn btn-edit">Editar</a>
+
                             <a href="eliminarSeguro.php?id_seguro=<?php echo $seguro['id_seguro']; ?>" class="btn btn-delete">Eliminar</a>
                         </td>
                     </tr>

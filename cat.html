@@ -1,226 +1,318 @@
-﻿<!D<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
+
 <head>
-   <link rel="icon" href="logotipo.png">
-
-   <meta charset="UTF-8">
-   <title>Gatos</title>
-</head>
-  <!-- Básico-->
-  <meta charset="utf-8" />
+  <link rel="icon" href="logotipo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="gatos, mascotas, viajes, planes de viaje">
+  <meta name="description" content="Información sobre gatos y servicios de viaje para tus mascotas">
+  <meta name="author" content="Pet Travel">
 
-  <!-- Metas del sitio -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <title>Gatos - Pet Travel</title>
 
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilos personalizados -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles1.css" />
+
+  <!-- Slider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- Estilo adicional para las imágenes y botones -->
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    .hero_area {
+      background-color: #f8f9fa;
+      padding-top: 50px;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar {
+      background-color: #dd56a9;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .service_section h1,
+    .service_section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .service_section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .card {
+   
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width:300px;
+     margin: 10px;
+     height: 400px;
+     
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .title {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .card .coverage {
+      background-color: #f8f9fa;
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card .cotizar {
+      background-color: #ffc107;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .card .cotizar:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .img_box {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .img_box img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .detail_box h6 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .detail_box p {
+      font-size: 1rem;
+      color: #555;
+    }
+  .row-1 {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+  }
+    .row img {
+      margin-bottom: 15px;
+    }
+
+    .cotizar {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- header section starts -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
-            <span>
-              Pet Travel
-            </span>
+            <img src="images/logo.png" alt="Pet Travel Logo">
+            <span>Pet Travel</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Inicio <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="dog.html"> Perros</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="cat.html"> Gatos</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="contacto.html"> Contacto </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="login.html"> Iniciar sesion </a>
-                </li>
-                
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                
-              </form>
-            </div>
-
-            </div>
+          <div class="collapse navbar-collapse text-left" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dog.html">Perros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cat.html">Gatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Iniciar sesión</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
     </header>
+    <!-- header section ends -->
+  </div>
 
-    <!-- sección del encabezado final -->
-   </div>
+  <!-- Service Section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <h1>¿Por qué elegir a los gatos?</h1>
+      <p>Los gatos pueden establecer vínculos fuertes con sus dueños, ofreciendo compañía y afecto. Muchos gatos son cariñosos
+        y buscan la atención de sus dueños. Se ha demostrado que tienen efectos calmantes en los humanos y pueden ayudar a
+        recuperarse más rápido de un trauma emocional, como el fallecimiento de un ser querido.</p>
 
-  <!-- sección de informacion-->
+      <p>Se adaptan a vivir en espacios pequeños, como apartamentos, donde el espacio es limitado. No necesitan salir a pasear,
+        ya que pueden hacer ejercicio dentro de la casa.</p>
 
-   <div class="container layout_padding2">
-       <section class="service_section layout_padding">
-
-<center><h1>¿Por qué elegir a los gatos?</h1></center>
-<br>
-    
-<p> 
-  Los gatos pueden establecer vínculos fuertes con sus dueños, ofreciendo companía y afecto. Muchos gatos son cariñosos y buscan la atención de sus dueños. Se ha demostrado que tiene efectos calmantes en los humanos y pueden ayudar a recuperarse más rápido de un trauma emocional, como el fallecimiento de un ser querido.
-
-</p>
-
-<p>
-   Se adaptan a vivir en espacios pequeños, como apartamentos, donde el espacio es limitado. No necesitan salir a pasear, ya que pueden hacer ejercicio dentro de la casa.
-</p>
-
-
-        <div class="col-md-4">
-          <img src="images/g-2.jpeg" alt="" class="w-10">
-          <img src="images/g-1.jpeg" alt="" class="w-10">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/g-1.jpeg" alt="Gato 1" class="img-fluid rounded">
         </div>
-
-
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="img_box">
-                  <img src="images/s-1.png" alt="">
-                </div>
-                <div class="detail_box">
-                  <h6>
-                    Características
-                  </h6>
-                  <p>
-                    <li>Sus ojos tiene una capa reflectante que les permite ver en la oscuridad.</li>
-                    <li>Sus orejas pueden girar hasta 180 grados, lo que les permite localizar sonidos con precisión.</li>
-                    <li>Son ágiles y pueden saltar grandes distanxias gracias a sus músculos.</li>
-                    <li>Existen una gran variedad de razas de gatos, cada una con su pelaje único en cuanto a color, textura y longitud.</li>
-                    <li>Tienen un excelente sentido del olfato (aproximadamente 14 veces más sensible que el de los humanos).</li>
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="img_box">
-                  <img src="images/s-2.png" alt="">
-                </div>
-                <div class="detail_box">
-                  <h6>
-                    Alimentación
-                  </h6>
-                  <p>
-                    Los gatos son animales carnívoros, es decir, necesitan una dieta que contenga preteínas de origen animal.  Por ejemplo pollo, vaca, carnero y pescados (sin espinas). También en pequeñas cantidades, verduras como zanahoria, remolacha, calabacín y otras.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="img_box">
-                  <img src="images/s-3.png" alt="">
-                </div>
-                <div class="detail_box">
-                  <h6>
-                    Reproducción
-                  </h6>
-                  <p>
-                    Las gatas pueden entran en celo varias veces en una sola temporada de reproduccion (cada 2 a 3 semanas), lo que les permite tener varias opotunidades de apareamiento. La gestación de una gata dura aproximadamente entre 63 y 65 días, auque puede oscilar entre 58 y 70 días. El tamaño de la camada puede variar, promediando entre 1 y 8 gatos, aunque 4 o 5 es lo más común. 
-                  </p>
-<p>
-  Es importante la esterilización y castración para controlar la población de gatos y evitar camadas no deseadas.
-</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-<h2><center>Planes de viajes</center></h2>
-
-<img src="images/g-3.jpeg" alt="" class="w-10">
-
-<p>¿Tiene gato y desea viajer con el? Solicite una cotización que se adapte a sus necesidades </p>
-
-<body>
-
-   <link rel="stylesheet" href="css/styles1.css">
-
-    <div class="card">
-        <div class="title">Pet Travel<br>Básico</div>
-        <div class="coverage">Cobertura<br>200 USD</div>
-        <p>Incluye coberturas elementales y básicas para el bienestar de tu mascota.</p>
-        <button class="cotizar"><a href="login.html" class="cot">Cotizar 90 USD</a></button>
-    </div>
-
-    <div class="card">
-        <div class="title">Pet Travel<br>Medio</div>
-        <div class="coverage">Cobertura<br>500 USD</div>
-        <p>Incluye coberturas con mejores características para prevenir accidentes en tu mascota.</p>
-        <button class="cotizar"><a href="login.html" class="cot">Cotizar 202 USD</a></button>
-    </div>
-
-    <div class="card">
-        <div class="title">Pet Travel<br>Estándar</div>
-        <div class="coverage">Cobertura<br>800 USD</div>
-        <p>Incluye coberturas más especializadas con las que tu mascota puede contar en caso de hacer travesuras.</p>
-        <button class="cotizar"><a href="login.html" class="cot">Cotizar 358 USD</a></button>
+        <div class="col-md-6">
+          <img src="images/g-2.jpeg" alt="Gato 2" class="img-fluid rounded">
+        </div>
       </div>
 
-    <div class="card">
-        <div class="title">Pet Travel<br>Premium</div>
-        <div class="coverage">Cobertura<br>1000 USD</div>
-        <p>Incluye coberturas elementales y básicas para el bienestar de tu mascota.</p>
-        <button class="cotizar"><a href="login.html"class="cot">Cotizar 460 USD</a></button>
-    </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="img_box">
+            <img src="images/s-1.png" alt="Características">
+          </div>
+          <div class="detail_box">
+            <h6>Características</h6>
+            <p>
+              <li>Sus ojos tienen una capa reflectante que les permite ver en la oscuridad.</li>
+              <li>Sus orejas pueden girar hasta 180 grados, lo que les permite localizar sonidos con precisión.</li>
+              <li>Son ágiles y pueden saltar grandes distancias gracias a sus músculos.</li>
+              <li>Existen una gran variedad de razas de gatos, cada una con su pelaje único en cuanto a color, textura y longitud.</li>
+              <li>Tienen un excelente sentido del olfato (aproximadamente 14 veces más sensible que el de los humanos).</li>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img_box">
+            <img src="images/s-2.png" alt="Alimentación">
+          </div>
+          <div class="detail_box">
+            <h6>Alimentación</h6>
+            <p>Los gatos son animales carnívoros, necesitan una dieta que contenga proteínas de origen animal, como pollo, vaca,
+              carnero y pescados (sin espinas). También en pequeñas cantidades, verduras como zanahoria, remolacha, calabacín y
+              otras.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img_box">
+            <img src="images/s-3.png" alt="Reproducción">
+          </div>
+          <div class="detail_box">
+            <h6>Reproducción</h6>
+            <p>Las gatas pueden entrar en celo varias veces en una sola temporada de reproducción (cada 2 a 3 semanas), lo que
+              les permite tener varias oportunidades de apareamiento. La gestación de una gata dura entre 63 y 65 días, aunque
+              puede oscilar entre 58 y 70 días. El tamaño de la camada puede variar, promediando entre 1 y 8 gatos, aunque 4 o 5
+              es lo más común.</p>
+            <p>Es importante la esterilización y castración para controlar la población de gatos y evitar camadas no deseadas.</p>
+          </div>
+        </div>
+      </div>
 
+      <h2>Planes de viajes</h2>
+      <img src="images/g-3.jpeg" alt="Gato viajero" class="img-fluid rounded mb-3">
+      <p>¿Tiene gato y desea viajar con él? Solicite una cotización que se adapte a sus necesidades.</p>
 
-
-
-          <div>
-      
+      <div class="row-1">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="title">Pet Travel Básico</div>
+            <div class="coverage">Cobertura: 200 USD</div>
+            <p>Incluye coberturas elementales y básicas para el bienestar de tu mascota.</p>
+            <a href="login.html" class="cotizar">Cotizar 90 USD</a>
           </div>
         </div>
 
+        <div class="col-md-3">
+          <div class="card">
+            <div class="title">Pet Travel Medio</div>
+            <div class="coverage">Cobertura: 500 USD</div>
+            <p>Incluye coberturas con mejores características para prevenir accidentes en tu mascota.</p>
+            <a href="login.html" class="cotizar">Cotizar 202 USD</a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="title">Pet Travel Estándar</div>
+            <div class="coverage">Cobertura: 800 USD</div>
+            <p>Incluye coberturas más especializadas para tu mascota.</p>
+            <a href="login.html" class="cotizar">Cotizar 358 USD</a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="title">Pet Travel Premium</div>
+            <div class="coverage">Cobertura: 1000 USD</div>
+            <p>Incluye coberturas elementales y básicas para el bienestar de tu mascota.</p>
+            <a href="login.html" class="cotizar">Cotizar 460 USD</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
- 
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
